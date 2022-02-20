@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Psanchez-IT/static/css/main.4eada7bf.css",
+    "main.js": "/Psanchez-IT/static/js/main.f3a056c3.js",
+    "static/js/787.e044bbc5.chunk.js": "/Psanchez-IT/static/js/787.e044bbc5.chunk.js",
+    "index.html": "/Psanchez-IT/index.html",
+    "main.4eada7bf.css.map": "/Psanchez-IT/static/css/main.4eada7bf.css.map",
+    "main.f3a056c3.js.map": "/Psanchez-IT/static/js/main.f3a056c3.js.map",
+    "787.e044bbc5.chunk.js.map": "/Psanchez-IT/static/js/787.e044bbc5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4eada7bf.css",
+    "static/js/main.f3a056c3.js"
+  ]
+}
