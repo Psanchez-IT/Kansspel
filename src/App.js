@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import SingleCard from "./components/SingleCard.js";
 
@@ -24,7 +24,6 @@ function App() {
     const shuffledCards = [...cardsArray]
       .sort(() => Math.random() - 0.5)
       .map((card) => ({ ...card, id: Math.random() }));
-
     setCards(shuffledCards);
   };
 
