@@ -1,26 +1,34 @@
-import { useState } from "react";
-import "./App.css";
+import { useEffect, useState } from "react";
 import SingleCard from "./components/SingleCard.js";
+import "./App.css";
 
-const cardsArray = [];
-cardsArray.push({
-  value: 1,
-});
-for (let i = 0; i < 100; i++) {
-  cardsArray.push({
-    value: 2,
-  });
-}
-for (let i = 0; i < 9899; i++) {
-  cardsArray.push({
-    value: 3,
-  });
-}
+const axios = require("axios");
+var cardsArray = [];
 
 function App() {
   const [cards, setCards] = useState([]);
 
+  useEffect(() => {
+    kaarten();
+  }, []);
+
+  var kaarten = async () => {
+    await axios
+      .get("https://localhost:44322/api/CardModels/")
+      .then((response) => {
+        return response.data;
+      })
+      .then((data) => {
+        cardsArray = data;
+        console.log(cardsArray);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   const shuffleCards = () => {
+    cardsArray.push(kaarten.data);
     const shuffledCards = [...cardsArray]
       .sort(() => Math.random() - 0.5)
       .map((card) => ({ ...card, id: Math.random() }));
